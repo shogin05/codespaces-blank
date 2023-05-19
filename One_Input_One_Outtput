@@ -1,0 +1,17 @@
+IF Start AND (NOT Memory_2) THEN
+	Memory_1:=TRUE;
+ELSE
+	Memory_1:=FALSE;
+END_IF
+
+IF Start THEN
+	Memory_2:=TRUE;
+ELSE
+	Memory_2:=FALSE;
+END_IF
+
+IF ((NOT PUMP) AND Memory_1) OR (PUMP AND (NOT Memory_1)) THEN
+	PUMP:=TRUE;
+ELSE
+	PUMP:=FALSE;
+END_IF
